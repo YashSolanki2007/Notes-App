@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Notes</title>
+{% endblock %}
+{% block body %}
+<center>
+    <h1>Notes</h1>
+    <br /><br />
+    <form method='POST'>
+        <div class="input-group flex-nowrap">
+
+            <span class="input-group-text" id="addon-wrapping">Enter Note</span>
+            <input name='notesInp' type="text" class="form-control" placeholder="Enter Note" aria-label="Username"
+                aria-describedby="addon-wrapping">
+
+        </div>
+    </form>
+
+    </form>
+    <br />
+    {% for note in notes_list %}
+    <div class="note">
+        <h5>{{ note }}
+        </h5>
+        <br />
+        <hr />
+    </div>
+    {% endfor %}
+</center>
+{% endblock %}
